@@ -8,7 +8,7 @@ on:
             default: 'latest'
 jobs:
   build:
-    run-on: windows-latest
+    runs-on: windows-latest
     steps:
       - name: 读取仓库
         uses: actions/checkout@v4
