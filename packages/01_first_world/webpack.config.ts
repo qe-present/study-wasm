@@ -7,7 +7,12 @@ module.exports = {
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.ts',
+        filename: 'index.js',
+    },
+    resolve: {
+        alias:{
+            "@crates/*": path.resolve(__dirname, "../../crates/*"),
+        }
     },
     devServer: {
         hot: true,

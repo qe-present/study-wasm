@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@crates/*": ["/crates/*"]  // 添加这行
+      "@crates/*": ["crates/*"]  // 添加这行
     }
   }
 }
