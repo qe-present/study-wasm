@@ -4,15 +4,22 @@ const webpack = require('webpack');
 const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 module.exports = {
-    entry: './index.js',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
+        filename: 'index.ts',
+    },
+    devServer: {
+        hot: true,
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        port: 3000,
     },
     plugins: [
         new HtmlWebpackPlugin(),
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, ".")
+            crateDirectory: path.resolve(__dirname, "../../crates/01_first_world")
         }),
     ],
     mode: 'development',
