@@ -7,18 +7,18 @@ on:
             required: true
             default: 'latest'
 jobs:
-build_examples:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - run: rustup update --no-self-update stable && rustup default stable
-    - run: rustup target add wasm32-unknown-unknown
-    - run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -f
-    - run: |
-        cargo install wasm-bindgen-cli
-        ln -snf `pwd`/target/debug/wasm-bindgen $(dirname `which cargo`)/wasm-bindgen
+  build_examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup update --no-self-update stable && rustup default stable
+      - run: rustup target add wasm32-unknown-unknown
+      - run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh -s -- -f
+      - run: |
+          cargo install wasm-bindgen-cli
+          ln -snf `pwd`/target/debug/wasm-bindgen $(dirname `which cargo`)/wasm-bindgen
 
-    - uses: actions/upload-artifact@v4
-      with:
-        name: examples1
-        path: exbuild
+      - uses: actions/upload-artifact@v4
+        with:
+          name: examples1
+          path: exbuild
