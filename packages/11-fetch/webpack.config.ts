@@ -21,11 +21,9 @@ module.exports = {
         port: 3000,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template:'index.html',
-        }),
+        new HtmlWebpackPlugin(),
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "../../crates/06-char"),
+            crateDirectory: path.resolve(__dirname, "../../crates/11-fetch"),
         }),
     ],
     mode: 'development',

@@ -1,0 +1,13 @@
+[package]
+name = "fetch"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wasm-bindgen = {workspace = true}
+web-sys = {workspace = true, features = ['Headers', 'Request', 'RequestInit', 'RequestMode', 'Response', 'Window']}
+js-sys = {workspace = true}
+wasm-bindgen-futures ={workspace = true}
+
+[lib]
+crate-type = ["cdylib"]

@@ -1,0 +1,1 @@
+import("@crates/08-dom/pkg").catch(console.error)

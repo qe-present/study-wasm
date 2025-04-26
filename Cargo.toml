@@ -6,9 +6,13 @@ members = [
     "crates/03-without-a-bundler",
     "crates/04-synchronous-instantiation",
     "crates/05-import-js",
-    "crates/06-char"
-]
+    "crates/06-char",
+    "crates/07-wasm-in-wasm",
+    "crates/08-dom",
+    "crates/09-closures", "crates/10-performance", "crates/11-fetch"]
 [workspace.dependencies]
 wasm-bindgen = "0.2.100"
-
+wasm-bindgen-futures = "0.4.50"
+web-sys = "0.3.77"
+js-sys = "0.3.77"
 

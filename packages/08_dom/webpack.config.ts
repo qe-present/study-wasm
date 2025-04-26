@@ -22,10 +22,11 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template:'index.html',
+            template:"index.html",
         }),
+        
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "../../crates/06-char"),
+            crateDirectory: path.resolve(__dirname, "../../crates/08-dom"),
         }),
     ],
     mode: 'development',

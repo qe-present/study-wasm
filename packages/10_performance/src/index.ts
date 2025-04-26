@@ -1,0 +1,1 @@
+import("@crates/10-performance/pkg").catch(console.error)

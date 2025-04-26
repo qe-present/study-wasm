@@ -1,0 +1,1 @@
+import("@crates/09-closures/pkg").catch(console.error)

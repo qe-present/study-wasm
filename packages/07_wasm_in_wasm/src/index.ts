@@ -1,0 +1,1 @@
+import("@crates/07-wasm-in-wasm/pkg").catch(console.error)
