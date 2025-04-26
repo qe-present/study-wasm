@@ -1,0 +1,9 @@
+{
+  "name": "06-char",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pkg": "wasm-pack build --target web"
+  }
+}

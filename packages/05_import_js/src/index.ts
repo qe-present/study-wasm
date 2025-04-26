@@ -1,0 +1,1 @@
+import('@crates/05-import-js/pkg').catch(console.error)
