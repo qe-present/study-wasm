@@ -1,0 +1,10 @@
+[package]
+name = "synchronous-instantiation"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wasm-bindgen = {workspace = true}
+
+[lib]
+crate-type = ["cdylib"]

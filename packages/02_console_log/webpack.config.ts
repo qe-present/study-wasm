@@ -1,7 +1,6 @@
-const path = require('path');
+const path=require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -24,7 +23,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin(),
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "../../crates/01-first-world")
+            crateDirectory: path.resolve(__dirname, "../../crates/02-console-log")
         }),
     ],
     mode: 'development',

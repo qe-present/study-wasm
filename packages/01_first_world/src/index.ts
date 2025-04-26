@@ -1,2 +1,3 @@
-import {greet} from "@crates/01_first_world/pkg";
+import {greet} from "@crates/01-first-world/pkg";
+
 greet("world")
