@@ -32,6 +32,9 @@ importers:
       webpack-dev-server:
         specifier: ^5.2.1
         version: 5.2.1(webpack-cli@6.0.1)(webpack@5.99.7)
+      webpack-merge:
+        specifier: ^6.0.1
+        version: 6.0.1
 
   packages/01_first_world:
     devDependencies:
@@ -50,6 +53,22 @@ importers:
       webpack-dev-server:
         specifier: ^5.2.1
         version: 5.2.1(webpack-cli@6.0.1)(webpack@5.99.7)
+
+  packages/02_console_log: {}
+
+  packages/05_import_js: {}
+
+  packages/06-char: {}
+
+  packages/07_wasm_in_wasm: {}
+
+  packages/08_dom: {}
+
+  packages/09_closures: {}
+
+  packages/10_performance: {}
+
+  packages/11-fetch: {}
 
 packages:
 

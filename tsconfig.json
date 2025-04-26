@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@crates/*": ["crates/*"]  // 添加这行
-    }
+    },
+    "allowSyntheticDefaultImports": true
   }
 }

@@ -1,6 +1,5 @@
 {
   "name": "10",
-  "main": "index.html",
   "scripts": {
     "serve": "webpack serve --mode development --open",
     "build": "webpack"

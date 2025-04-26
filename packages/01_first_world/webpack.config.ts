@@ -1,34 +1,14 @@
-const path = require('path');
+const path=require('path');
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
+const { merge } = require('webpack-merge');
+const baseConfig = require('../../config/webpack/webpack.base.ts'); // 调整路径以匹配你的目录结构
 
-module.exports = {
-    entry: './src/index.ts',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
-    },
-    resolve: {
-        alias:{
-            "@crates/*": path.resolve(__dirname, "../../crates/*"),
-        }
-    },
-    devServer: {
-        hot: true,
-        static: {
-            directory: path.join(__dirname, 'dist'),
-        },
-        port: 3000,
-    },
+module.exports = merge(baseConfig, {
     plugins: [
         new HtmlWebpackPlugin(),
         new WasmPackPlugin({
-            crateDirectory: path.resolve(__dirname, "../../crates/01-first-world")
+            crateDirectory: path.resolve(__dirname, "../../crates/01-first-world"),
         }),
     ],
-    mode: 'development',
-    experiments: {
-        asyncWebAssembly: true
-    }
-};
+});
